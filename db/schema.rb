@@ -10,8 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.1].define(version: 0) do
+ActiveRecord::Schema[7.1].define(version: 2023_12_14_143454) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "rides", force: :cascade do |t|
+    t.integer "distance_target"
+    t.integer "daily_distance"
+    t.float "average_speed"
+    t.integer "daily_minute"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
 end

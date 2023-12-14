@@ -1,4 +1,8 @@
-class PagesController < ApplicationController
+class RideController < ApplicationController
+  def new
+    @ride = Ride.new
+  end
+
   def create
     @ride = Ride.new(ride_params)
     if @ride.save

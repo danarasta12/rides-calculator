@@ -1,0 +1,8 @@
+<h1>Ride#create</h1>
+<p>Find me in app/views/ride/create.html.erb</p>
+
+<%= simple_form_for(@ride) do |f| %>
+    <%= f.input :distance_target %>
+    <%= f.input :average_speed %>
+    <%= f.submit %>
+  <% end %>
